@@ -1,0 +1,173 @@
+/* Reset & Global Styles */
+/* Reset Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 10px 20px;
+}
+
+/* Logo */
+.logo img {
+    height: 70px;
+    width: auto;
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.menu a {
+    position: relative; /* Required for ::after to work */
+    text-decoration: none;
+    color: rgb(12, 11, 11);
+    padding: 8px 15px;
+    font-size: 24px;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu a::after {
+    content: ""; /* Creates an empty element */
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Adjust the underline position */
+    width: 0; /* Hidden initially */
+    height: 3px; /* Thickness of the line */
+    background-color: #28a745; /* Green underline */
+    transition: width 0.3s ease-in-out; /* Smooth animation */
+}
+.menu a:hover {
+    color: rgb(26, 158, 105); /* Change text color on hover */
+}
+.menu a:hover::after {
+    width: 100%;
+    
+}
+
+/* Buttons */
+.btn {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 16px 15px;
+    border-radius: 50px; /* Rounded button */
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Green Filled Button */
+.btn-filled {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 18px;
+}
+
+.btn-filled:hover {
+    background-color: #c7d5ca;
+}
+
+/* Outline Button */
+.btn-outline {
+    background-color: white;
+    color: #28a745;
+    border: 4px solid #28a745;
+}
+
+.btn-outline:hover {
+    background-color: #28a745;
+    color: white;
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background: #517a8a;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Mobile Buttons at Bottom */
+    .menu button {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #5449a6;
+        padding: 10px 0;
+        text-align: center;
+    }
+    
+}
+.hidden-image {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.show-image {
+    transform: translateX(0);
+    opacity: 1;
+}
+.btn-filled1 {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    
+}
+
+.btn-filled1:hover {
+    background-color: #c7d5ca;
+}
+
+/* Outline Button */
+.btn-outline1 {
+    background-color: white;
+    color: #28a745;
+    border: 3px solid #28a745;
+}
+
+.btn-outline1:hover {
+    background-color: #28a745;
+    color: white;
+}
+.btn1 {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 2px 30px;
+    border-radius: 20px; /* Rounded button */
+    cursor: pointer;
+    transition: 0.3s ease;
+}
